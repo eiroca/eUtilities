@@ -1,0 +1,6 @@
+Name       : Pack
+Description: 
+OS         : Win32
+Type       : GUI
+Language   : Turbo Delphi 2006
+Dependency : eLib
