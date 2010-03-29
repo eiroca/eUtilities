@@ -42,7 +42,16 @@ begin
     OldFE:= oldFiles.FileElem[i];
     if OldFE.Size = NewFE.Size then begin
       if NewFE.Size = 0 then Found:= true
-      else Found:= FileUtil.Compare(OldFE.Path, NewFE.Path);
+      else begin
+        if (NewFE.TAG=0) and (NewFE.TAG=OldFE.TAG) then begin
+          try
+            Found:= FileUtil.Compare(OldFE.Path, NewFE.Path);
+          except
+            Found:= false;
+            writeln('Error processing' + NewFE.Path);
+          end;
+        end;
+      end;
       if Found then break;
     end;
   end;
@@ -59,10 +68,12 @@ end;
 
 procedure Main;
 var
-  cmd, fmt, OldPath, NewPath: string;
+  i: integer;
+  cmd: string;
+  OldPath, NewPath: string;
   oldFiles: TFiles;
   newFiles: TFiles;
-  i: integer;
+  fmt: string;
   miss: boolean;
 begin
   if ParamCount <> 3 then Help;
