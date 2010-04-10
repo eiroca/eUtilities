@@ -62,7 +62,7 @@ end;
 
 procedure Help;
 begin
-  writeln(ParamStr(0),' miss|dupl OlFilesPath NewFilesPath');
+  writeln(ParamStr(0),' miss|dupl OldFilesPath NewFilesPath');
   Halt;
 end;
 
