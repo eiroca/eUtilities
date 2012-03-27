@@ -26,7 +26,7 @@ procedure Main;
 implementation
 
 uses
-  Windows, SysUtils, Classes, eLib;
+  Windows, SysUtils, Classes, eLibCore;
 
 var
   files: TFiles;
