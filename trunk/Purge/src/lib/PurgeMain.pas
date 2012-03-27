@@ -26,7 +26,7 @@ procedure Main;
 implementation
 
 uses
-  Windows, SysUtils, eLib;
+  Windows, SysUtils, eLibCore;
 
 var
   files: TFiles;
@@ -122,7 +122,7 @@ begin
   if ParamCount>=1 then Mask:= ParamStr(1) else Mask:= '*.*';
   if ParamCount>=2 then Path:= ParamStr(2) else Path:= '';
   if (Mask='-?') or (Mask='?') or (Mask='-h') then begin
-    writeln(ParamStr(0),' [mask [path]]');
+    writeln(ExtractFileName(ParamStr(0)),' [mask [path]]');
   end
   else begin
     Purge(path, mask);

@@ -17,7 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 (*
  @author(Enrico Croce)
 *)
-program Purge2006;
+program Purge;
 
 {$APPTYPE CONSOLE}
 
