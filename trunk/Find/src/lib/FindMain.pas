@@ -26,7 +26,7 @@ procedure Main;
 implementation
 
 uses
-  eLib, Classes, SysUtils;
+  eLibCore, Classes, SysUtils;
 
 var
   outText: TCondFile;
@@ -48,7 +48,7 @@ begin
             Found:= FileUtil.Compare(OldFE.Path, NewFE.Path);
           except
             Found:= false;
-            writeln('Error processing' + NewFE.Path);
+            writeln('Error processing ' + NewFE.Path);
           end;
         end;
       end;
@@ -62,7 +62,7 @@ end;
 
 procedure Help;
 begin
-  writeln(ParamStr(0),' miss|dupl OldFilesPath NewFilesPath');
+  writeln(ExtractFileName(ParamStr(0),' miss|dupl OldFilesPath NewFilesPath');
   Halt;
 end;
 
