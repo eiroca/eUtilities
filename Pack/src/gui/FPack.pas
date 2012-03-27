@@ -61,7 +61,7 @@ implementation
 {$R *.DFM}
 
 uses
-  eLib;
+  eLibCore;
 
 function TfmPack.ProcessFile(Sender: TObject; const SRec: TSearchRec): boolean;
   procedure AddSize(node: TTreeNode; const SRec: TSearchRec);

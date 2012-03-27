@@ -29,8 +29,14 @@ object fmPack: TfmPack
     Width = 688
     Height = 137
     Align = alClient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Lines.Strings = (
       'meOut')
+    ParentFont = False
     TabOrder = 1
   end
   object Panel1: TPanel
