@@ -67,7 +67,7 @@ implementation
 {$R *.dfm}
 
 uses
-  eLib;
+  eLibCore;
 
 procedure editConfig(conf: THTTPGetterConf);
 var

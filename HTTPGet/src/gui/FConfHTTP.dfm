@@ -28,16 +28,18 @@ object fmConfHTTP: TfmConfHTTP
       Top = 5
       Width = 75
       Height = 25
-      TabOrder = 0
       Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object btCancel: TBitBtn
       Left = 96
       Top = 5
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object PageControl1: TPageControl
@@ -50,6 +52,10 @@ object fmConfHTTP: TfmConfHTTP
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'Proxy Configuration'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbPassword: TLabel
         Left = 8
         Top = 96
