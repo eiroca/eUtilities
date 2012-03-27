@@ -26,7 +26,7 @@ procedure Main;
 implementation
 
 uses
-  Windows, SysUtils, Classes, eLib;
+  Windows, SysUtils, Classes, eLibCore;
 
 var
   files: TFiles;
@@ -123,7 +123,7 @@ begin
   if ParamCount>=1 then path:= ParamStr(1) else path:= '.';
   if ParamCount>=2 then mode:= StrToInt(ParamStr(2)) else mode:= 1;
   if (path='-?') or (path='?') or (path='-h') then begin
-    writeln(ParamStr(0),' [path [mode]]');
+    writeln(ExtractFileName(ParamStr(0)),' [path [mode]]');
   end
   else begin
     case mode of
