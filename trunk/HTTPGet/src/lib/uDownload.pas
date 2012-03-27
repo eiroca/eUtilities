@@ -30,7 +30,7 @@ implementation
 
 uses
   IdBaseComponent, IdURI, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  IdCoderMIME, IdCoder, eLib;
+  IdCoderMIME, IdCoder, eLibCore;
 
 procedure makePath(const aPath: string);
 begin

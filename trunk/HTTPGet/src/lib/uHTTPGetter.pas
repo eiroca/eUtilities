@@ -51,7 +51,7 @@ procedure HTTP_get(aURL: string; fl: TStream; const conf: THTTPGetterConf);
 implementation
 
 uses
-  eLib;
+  eLibCore;
 
 const
   PASSWORD = 'password';
