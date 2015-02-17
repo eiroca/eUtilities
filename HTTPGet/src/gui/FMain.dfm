@@ -22,6 +22,7 @@ object fmMain: TfmMain
     Width = 426
     Height = 326
     Align = alClient
+    ParentFont = False
     TabOrder = 0
     WordWrap = False
   end

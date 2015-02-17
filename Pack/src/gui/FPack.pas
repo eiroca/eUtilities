@@ -1,5 +1,5 @@
 (* GPL > 3.0
-Copyright (C) 1996-2008 eIrOcA Enrico Croce & Simona Burzio
+Copyright (C) 1996-2014 eIrOcA Enrico Croce & Simona Burzio
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -22,8 +22,8 @@ unit FPack;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ComCtrls, Menus, ExtCtrls;
+  eLibCore, Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, Menus, ExtCtrls;
 
 type
   TNodeInfo = class(TCollectionItem)
@@ -50,7 +50,7 @@ type
      info: TCollection;
     public
      procedure Pack(size: integer; const Inpath, OutPath: string);
-     function  ProcessFile(Sender: TObject; const SRec: TSearchRec): boolean;
+     function  ProcessFile(Sender: TDirScan; const SRec: TSearchRec): boolean;
   end;
 
 var
@@ -60,10 +60,7 @@ implementation
 
 {$R *.DFM}
 
-uses
-  eLibCore;
-
-function TfmPack.ProcessFile(Sender: TObject; const SRec: TSearchRec): boolean;
+function TfmPack.ProcessFile(Sender: TDirScan; const SRec: TSearchRec): boolean;
   procedure AddSize(node: TTreeNode; const SRec: TSearchRec);
   begin
     if (node.Data = nil) then node.Data:= info.Add;

@@ -1,7 +1,7 @@
 object fmConfHTTP: TfmConfHTTP
   Left = 0
   Top = 0
-  Caption = 'fmConfHTTP'
+  Caption = 'Configuration'
   ClientHeight = 194
   ClientWidth = 252
   Color = clBtnFace
