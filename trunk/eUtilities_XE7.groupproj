@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{39C02701-DD42-4E40-B928-6B110B0B4BA0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ConvertForm\src\ConvertForm.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Find\src\Find.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HTTPGet\src\HTTPGet.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Pack\src\Pack.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Purge\src\Purge.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rename\src\Rename.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ConvertForm">
+        <MSBuild Projects="ConvertForm\src\ConvertForm.dproj"/>
+    </Target>
+    <Target Name="ConvertForm:Clean">
+        <MSBuild Projects="ConvertForm\src\ConvertForm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConvertForm:Make">
+        <MSBuild Projects="ConvertForm\src\ConvertForm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Find">
+        <MSBuild Projects="Find\src\Find.dproj"/>
+    </Target>
+    <Target Name="Find:Clean">
+        <MSBuild Projects="Find\src\Find.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Find:Make">
+        <MSBuild Projects="Find\src\Find.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HTTPGet">
+        <MSBuild Projects="HTTPGet\src\HTTPGet.dproj"/>
+    </Target>
+    <Target Name="HTTPGet:Clean">
+        <MSBuild Projects="HTTPGet\src\HTTPGet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HTTPGet:Make">
+        <MSBuild Projects="HTTPGet\src\HTTPGet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Pack">
+        <MSBuild Projects="Pack\src\Pack.dproj"/>
+    </Target>
+    <Target Name="Pack:Clean">
+        <MSBuild Projects="Pack\src\Pack.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pack:Make">
+        <MSBuild Projects="Pack\src\Pack.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Purge">
+        <MSBuild Projects="Purge\src\Purge.dproj"/>
+    </Target>
+    <Target Name="Purge:Clean">
+        <MSBuild Projects="Purge\src\Purge.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Purge:Make">
+        <MSBuild Projects="Purge\src\Purge.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rename">
+        <MSBuild Projects="Rename\src\Rename.dproj"/>
+    </Target>
+    <Target Name="Rename:Clean">
+        <MSBuild Projects="Rename\src\Rename.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rename:Make">
+        <MSBuild Projects="Rename\src\Rename.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ConvertForm;Find;HTTPGet;Pack;Purge;Rename"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ConvertForm:Clean;Find:Clean;HTTPGet:Clean;Pack:Clean;Purge:Clean;Rename:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ConvertForm:Make;Find:Make;HTTPGet:Make;Pack:Make;Purge:Make;Rename:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,5 +1,5 @@
 (* GPL > 3.0
-Copyright (C) 1996-2008 eIrOcA Enrico Croce & Simona Burzio
+Copyright (C) 1996-2014 eIrOcA Enrico Croce & Simona Burzio
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -47,8 +47,10 @@ begin
           try
             Found:= FileUtil.Compare(OldFE.Path, NewFE.Path);
           except
-            Found:= false;
-            writeln('Error processing ' + NewFE.Path);
+            on E: Exception do begin
+              Found:= false;
+              writeln(Format('Error processing %s (%s)', [NewFE.Path, E.Message]));
+            end;
           end;
         end;
       end;

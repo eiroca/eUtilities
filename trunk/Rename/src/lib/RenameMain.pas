@@ -1,5 +1,5 @@
 (* GPL > 3.0
-Copyright (C) 1996-2008 eIrOcA Enrico Croce & Simona Burzio
+Copyright (C) 1996-2014 eIrOcA Enrico Croce & Simona Burzio
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -47,7 +47,7 @@ begin
     end;
     for i:= 1 to length(NewName) do if NewName[i]='_' then NewName[i]:= ' ';
     for i:= 1 to length(NewName) do begin
-      if NewName[i] in ['a'..'z'] then begin
+      if CharInSet(NewName[i], ['a'..'z']) then begin
         NewName[i]:= UpCase(NewName[i]);
         break;
      end;
