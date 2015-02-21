@@ -41,7 +41,7 @@
         <SanitizedProjectName>Find</SanitizedProjectName>
         <DCC_UnitSearchPath>$(BDSCOMMONDIR)\$(Platform)\$(Config);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
-        <DCC_ExeOutput>$(OUTDIR)\eUtilities</DCC_ExeOutput>
+        <DCC_ExeOutput>$(OUTDIR)\$(Platform)\eUtilities</DCC_ExeOutput>
         <Manifest_File>None</Manifest_File>
         <DCC_DcuOutput>$(BDSCOMMONDIR)\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
@@ -113,9 +113,7 @@
                 <Source>
                     <Source Name="MainSource">Find.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="S:\0utput\Delphi\BPL\JvBDEDesign160.bpl">JVCL BDE Components</Excluded_Packages>
-                </Excluded_Packages>
+                <Excluded_Packages/>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>
